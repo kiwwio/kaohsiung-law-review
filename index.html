@@ -73,7 +73,7 @@
           </div>
 
           <div class="md:hidden">
-            <button class="text-slate-500">
+            <button class="text-slate-500" aria-label="Menu">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
@@ -87,7 +87,7 @@
     <header id="home" class="relative bg-slate-900 overflow-hidden py-32 sm:py-56">
       <img
         src="https://images.unsplash.com/photo-1548630882-0050886a053c?auto=format&fit=crop&q=80&w=2000"
-        alt="Kaohsiung Harbor"
+        alt="Kaohsiung Harbor Backdrop"
         class="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
       />
       <div class="mx-auto max-w-7xl px-6 lg:px-8 relative">
@@ -115,7 +115,7 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-x-20 gap-y-16 lg:grid-cols-2 items-center">
           <div class="order-2 lg:order-1">
-            <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-black tracking-widest mb-8">FOUNDER PROFILE</span>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-black tracking-widest mb-8 uppercase">Founder Profile</span>
             <h2 class="text-4xl font-serif font-bold tracking-tight text-slate-900 sm:text-6xl mb-10 leading-tight">
               創辦人：祝正華
             </h2>
@@ -134,13 +134,11 @@
             </div>
           </div>
           <div class="relative order-1 lg:order-2">
-            <div class="relative z-10 aspect-[4/5] lg:aspect-[1/1] overflow-hidden rounded-[3rem] shadow-3xl border-[16px] border-white ring-1 ring-slate-100">
-              <!-- 此處引用您上傳的照片 -->
+            <div class="relative z-10 aspect-[4/5] lg:aspect-[1/1] overflow-hidden rounded-[3rem] shadow-3xl border-[16px] border-white ring-1 ring-slate-100 bg-slate-100">
               <img
                 src="founder-boat.jpg"
                 alt="祝正華創辦人於港口掌舵"
                 class="h-full w-full object-cover scale-105 transition-transform duration-700 hover:scale-110"
-                onerror="this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=800'; this.classList.add('opacity-50')"
               />
             </div>
             <div class="absolute -bottom-10 -right-6 bg-indigo-900 text-white p-12 rounded-[2rem] shadow-2xl hidden md:block z-20">
@@ -166,48 +164,63 @@
         </div>
         
         <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <!-- Area 1 -->
-          <article class="flex flex-col bg-white p-10 sm:p-12 rounded-[2.5rem] card-shadow border border-slate-50 transition-all duration-500 group">
-            <div class="mb-8">
-              <span class="rounded-full bg-indigo-50 px-4 py-1.5 font-bold text-indigo-700 tracking-wide text-[11px] uppercase">Constitutional Law</span>
+          <!-- Area 1: 憲法權限與地方自治 -->
+          <article class="flex flex-col bg-white overflow-hidden rounded-[2.5rem] card-shadow border border-slate-50 transition-all duration-500 group">
+            <div class="aspect-square w-full overflow-hidden bg-slate-100">
+              <img src="research-1.jpg" alt="憲法教學現場" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
-            <div class="flex-grow">
-              <h3 class="text-2xl font-serif font-bold leading-snug text-slate-900 group-hover:text-indigo-700 transition-colors duration-300">
-                憲法權限與地方自治
-              </h3>
-              <p class="mt-6 text-[15px] leading-8 text-slate-500 font-light">
-                聚焦於中央與地方權限之劃分，特別是地方自治條例在憲法框架下的法律效力，以及如何透過法律保障地方發展權益。
-              </p>
-            </div>
-          </article>
-
-          <!-- Area 2 -->
-          <article class="flex flex-col bg-white p-10 sm:p-12 rounded-[2.5rem] card-shadow border border-slate-50 transition-all duration-500 group">
-            <div class="mb-8">
-              <span class="rounded-full bg-blue-50 px-4 py-1.5 font-bold text-blue-700 tracking-wide text-[11px] uppercase">Geopolitics</span>
-            </div>
-            <div class="flex-grow">
-              <h3 class="text-2xl font-serif font-bold leading-snug text-slate-900 group-hover:text-blue-700 transition-colors duration-300">
-                城市轉型與產業地緣政治
-              </h3>
-              <p class="mt-6 text-[15px] leading-8 text-slate-500 font-light">
-                探討高雄作為海港城市在全球供應鏈中的戰略地位，分析半導體產業南移政策背後的法律支持與政經誘因。
-              </p>
+            <div class="p-10 sm:p-12">
+              <div class="mb-6">
+                <span class="rounded-full bg-indigo-50 px-4 py-1.5 font-bold text-indigo-700 tracking-wide text-[11px] uppercase">Constitutional Law</span>
+              </div>
+              <div class="flex-grow">
+                <h3 class="text-2xl font-serif font-bold leading-snug text-slate-900 group-hover:text-indigo-700 transition-colors duration-300">
+                  憲法權限與地方自治
+                </h3>
+                <p class="mt-6 text-[15px] leading-8 text-slate-500 font-light">
+                  聚焦於中央與地方權限之劃分，特別是地方自治條例在憲法框架下的法律效力，以及如何透過法律保障地方發展權益。
+                </p>
+              </div>
             </div>
           </article>
 
-          <!-- Area 3 -->
-          <article class="flex flex-col bg-white p-10 sm:p-12 rounded-[2.5rem] card-shadow border border-slate-50 transition-all duration-500 group">
-            <div class="mb-8">
-              <span class="rounded-full bg-slate-100 px-4 py-1.5 font-bold text-slate-700 tracking-wide text-[11px] uppercase">Digital Governance</span>
+          <!-- Area 2: 城市轉型與產業地緣政治 -->
+          <article class="flex flex-col bg-white overflow-hidden rounded-[2.5rem] card-shadow border border-slate-50 transition-all duration-500 group">
+            <div class="aspect-square w-full overflow-hidden bg-slate-100">
+              <img src="research-2.jpg" alt="城市商標法律案例研究" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
-            <div class="flex-grow">
-              <h3 class="text-2xl font-serif font-bold leading-8 text-slate-900 group-hover:text-slate-600 transition-colors duration-300">
-                科技倫理與數位法治架構
-              </h3>
-              <p class="mt-6 text-[15px] leading-8 text-slate-500 font-light">
-                隨著 AI 與大數據技術普及，關注如何建立平衡創新與人權的法律機制，並推動符合數位時代的正義準則。
-              </p>
+            <div class="p-10 sm:p-12">
+              <div class="mb-6">
+                <span class="rounded-full bg-blue-50 px-4 py-1.5 font-bold text-blue-700 tracking-wide text-[11px] uppercase">Geopolitics</span>
+              </div>
+              <div class="flex-grow">
+                <h3 class="text-2xl font-serif font-bold leading-snug text-slate-900 group-hover:text-blue-700 transition-colors duration-300">
+                  城市轉型與產業地緣政治
+                </h3>
+                <p class="mt-6 text-[15px] leading-8 text-slate-500 font-light">
+                  探討高雄作為海港城市在全球供應鏈中的戰略地位，分析半導體產業南移政策背後的法律支持與政經誘因。
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Area 3: 科技倫理與數位法治架構 -->
+          <article class="flex flex-col bg-white overflow-hidden rounded-[2.5rem] card-shadow border border-slate-50 transition-all duration-500 group">
+            <div class="aspect-square w-full overflow-hidden bg-slate-100">
+              <img src="research-3.jpg" alt="著作權合理使用研究" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div class="p-10 sm:p-12">
+              <div class="mb-6">
+                <span class="rounded-full bg-slate-100 px-4 py-1.5 font-bold text-slate-700 tracking-wide text-[11px] uppercase">Digital Governance</span>
+              </div>
+              <div class="flex-grow">
+                <h3 class="text-2xl font-serif font-bold leading-8 text-slate-900 group-hover:text-slate-600 transition-colors duration-300">
+                  科技倫理與數位法治架構
+                </h3>
+                <p class="mt-6 text-[15px] leading-8 text-slate-500 font-light">
+                  隨著 AI 與大數據技術普及，關注如何建立平衡創新與人權的法律機制，並推動符合數位時代的正義準則。
+                </p>
+              </div>
             </div>
           </article>
         </div>
@@ -243,19 +256,18 @@
             <h4 class="font-bold text-xl mb-10 font-serif">聯繫資訊</h4>
             <ul class="space-y-6 text-slate-400 text-base font-light">
               <li class="flex items-center space-x-4">
-                <span class="text-indigo-500 font-bold tracking-tighter uppercase text-[10px]">Email</span>
+                <span class="text-indigo-500 font-bold tracking-tighter uppercase text-[10px] w-12">Email</span>
                 <span>contact@kaohsiung-law-review.tw</span>
               </li>
-              <!-- 已移除 Office 資訊 -->
             </ul>
           </div>
         </div>
         
-        <div class="flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs space-y-6 md:space-y-0 tracking-widest uppercase">
+        <div class="flex flex-col md:flex-row justify-between items-center text-slate-500 text-[10px] space-y-6 md:space-y-0 tracking-[0.2em] uppercase">
           <p>© 2024 KAOHSIUNG LAW REVIEW. FOUNDER: CHU CHENG-HUA.</p>
           <div class="flex space-x-12">
-            <a href="#" class="hover:text-white transition-colors">Terms</a>
-            <a href="#" class="hover:text-white transition-colors">Privacy</a>
+            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
           </div>
         </div>
       </div>
